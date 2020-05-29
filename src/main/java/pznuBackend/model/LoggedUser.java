@@ -16,7 +16,7 @@ public class LoggedUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer uzytkownik_id;
 
-    private String imie, nazwisko, email;
+    private String imie, nazwisko, email, link_github;
 
     private boolean czy_pracownik;
 

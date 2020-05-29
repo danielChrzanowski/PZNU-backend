@@ -7,7 +7,7 @@ import pznuBackend.model.LoggedUser;
 
 @Repository
 public interface LoggedUserRepository extends CrudRepository<LoggedUser, Integer> {
-    @Query(value = "select u.uzytkownik_id, u.imie, u.nazwisko, u.email, u.czy_pracownik from uzytkownik u where u.uzytkownik_id like ?1", nativeQuery = true)
+    @Query(value = "select u.uzytkownik_id, u.imie, u.nazwisko, u.email, u.czy_pracownik, u.link_github from PZNU_USERS u where u.uzytkownik_id like ?1", nativeQuery = true)
     LoggedUser userByIdNoPassword(int id);
 
 }

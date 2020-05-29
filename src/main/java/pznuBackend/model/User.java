@@ -15,7 +15,7 @@ import java.util.Collection;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "uzytkownik")
+@Table(name = "PZNU_USERS")
 public class User implements UserDetails {
 
     @Id

@@ -1,9 +1,7 @@
 package pznuBackend.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pznuBackend.model.MojeZadanie;
 import pznuBackend.model.Zadanie;
 import pznuBackend.services.MojeZadanieService;
@@ -19,5 +17,10 @@ public class MojeZadanieController {
     @GetMapping("/getAllMojeZadania")
     public List<MojeZadanie> getAllMojeZadania() {
         return mojeZadanieService.getAllMojeZadania();
+    }
+
+    @PostMapping("/addMojeZadanie")
+    public void addMojeZadanie(@RequestBody MojeZadanie mojeZadanie) {
+        mojeZadanieService.addMojeZadanie(mojeZadanie);
     }
 }

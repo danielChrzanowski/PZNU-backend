@@ -14,9 +14,9 @@ public class MojeZadanieController {
     @Autowired
     MojeZadanieService mojeZadanieService;
 
-    @GetMapping("/getAllMojeZadania")
-    public List<MojeZadanie> getAllMojeZadania() {
-        return mojeZadanieService.getAllMojeZadania();
+    @GetMapping("/getAllMojeZadania/{id}")
+    public List<MojeZadanie> getAllMojeZadania(@PathVariable int id) {
+        return mojeZadanieService.getAllMojeZadania(id);
     }
 
     @PostMapping("/addMojeZadanie")

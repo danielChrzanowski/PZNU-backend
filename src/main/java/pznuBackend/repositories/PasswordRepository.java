@@ -14,6 +14,6 @@ public interface PasswordRepository extends CrudRepository<Password, Integer> {
 
     @Transactional
     @Modifying
-    @Query(value = "UPDATE `uzytkownik` SET `password` = ?2 WHERE `uzytkownik`.`uzytkownik_id` = ?1", nativeQuery = true)
+    @Query(value = "UPDATE PZNU_USERS SET password = ?2 WHERE uzytkownik_id = ?1", nativeQuery = true)
     void changePassword(int id, String newPassword);
 }

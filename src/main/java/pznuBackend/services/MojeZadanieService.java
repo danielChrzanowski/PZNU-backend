@@ -21,4 +21,7 @@ public class MojeZadanieService {
         mojeZadanieRepository.save(mojeZadanie);
     }
 
+    public void deleteLink(Integer id) {
+        mojeZadanieRepository.deleteById(id);
+    }
 }

@@ -22,4 +22,9 @@ public class MojeZadanieController {
     public void addMojeZadanie(@RequestBody MojeZadanie mojeZadanie) {
         mojeZadanieService.addMojeZadanie(mojeZadanie);
     }
+
+    @DeleteMapping("/deleteLink/{id}")
+    public void deleteLink(@PathVariable Integer id) {
+        mojeZadanieService.deleteLink(id);
+    }
 }

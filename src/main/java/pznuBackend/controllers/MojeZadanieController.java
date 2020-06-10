@@ -3,7 +3,6 @@ package pznuBackend.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pznuBackend.model.MojeZadanie;
-import pznuBackend.model.Zadanie;
 import pznuBackend.services.MojeZadanieService;
 
 import java.util.List;

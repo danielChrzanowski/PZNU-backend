@@ -17,6 +17,16 @@ public class MojeZadanieService {
         return new ArrayList<>(mojeZadanieRepository.findAllZadaniaByUserId(id));
     }
 
+    public List<MojeZadanie> getAllZadaniaNoId() {
+        List<MojeZadanie> zadanie = new ArrayList<>();
+        mojeZadanieRepository.findAll().forEach(zadanie::add);
+        return zadanie;
+    }
+
+    public MojeZadanie getZadanieById(int id) {
+       return mojeZadanieRepository.findById(id);
+    }
+
     public void addMojeZadanie(MojeZadanie mojeZadanie) {
         mojeZadanieRepository.save(mojeZadanie);
     }

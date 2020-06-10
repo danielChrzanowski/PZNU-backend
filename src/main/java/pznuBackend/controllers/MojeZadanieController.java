@@ -18,6 +18,16 @@ public class MojeZadanieController {
         return mojeZadanieService.getAllMojeZadania(id);
     }
 
+    @GetMapping("/getAllZadaniaNoId")
+    public List<MojeZadanie> getAllZadaniaNoId() {
+        return mojeZadanieService.getAllZadaniaNoId();
+    }
+
+    @GetMapping("/getZadanieById/{id}")
+    public MojeZadanie getZadanieById(@PathVariable int id) {
+        return mojeZadanieService.getZadanieById(id);
+    }
+
     @PostMapping("/addMojeZadanie")
     public void addMojeZadanie(@RequestBody MojeZadanie mojeZadanie) {
         mojeZadanieService.addMojeZadanie(mojeZadanie);

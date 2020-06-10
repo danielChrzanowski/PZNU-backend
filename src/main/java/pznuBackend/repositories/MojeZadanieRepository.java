@@ -10,4 +10,7 @@ public interface MojeZadanieRepository extends CrudRepository<MojeZadanie, Integ
 
     @Query(value = "SELECT * FROM PZNU_ZADANIA_ROZWIAZANE where id_uzytkownika=?1", nativeQuery = true)
     List<MojeZadanie> findAllZadaniaByUserId(int id);
+
+
+    MojeZadanie findById(int id);
 }

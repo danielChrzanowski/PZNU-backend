@@ -19,5 +19,5 @@ public class MojeZadanie {
 
     private Integer id_uzytkownika;
 
-    private String link, ocena;
+    private String tytul, link, ocena;
 }

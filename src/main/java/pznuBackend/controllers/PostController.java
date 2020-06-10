@@ -23,11 +23,6 @@ public class PostController {
 //    public Post getPostById(@PathVariable int id) {
 //        return postService.getPostById(id);
 //    }
-//
-//    @GetMapping("/postByUser/{user}")
-//    public Post getPostByUserId(@PathVariable int user) {
-//        return postService.getPostByUserId(user);
-//    }
 
     @PostMapping("/addPost")
     public void addPost(@RequestBody Post post) {

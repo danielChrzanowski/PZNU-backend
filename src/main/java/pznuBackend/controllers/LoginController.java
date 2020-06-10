@@ -26,8 +26,7 @@ public class LoginController {
     public UserDetails user(HttpServletRequest request) {
         String authToken = request.getHeader("Authorization").substring(5).trim();
         String username = new String(Base64.getDecoder().decode(authToken)).split(":")[0];
-        UserDetails user = userService.loadUserByUsername(username);
-        return user;
+        return userService.loadUserByUsername(username);
     }
 
 }

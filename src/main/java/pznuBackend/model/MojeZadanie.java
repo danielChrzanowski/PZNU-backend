@@ -19,5 +19,8 @@ public class MojeZadanie {
 
     private Integer id_uzytkownika;
 
-    private String tytul, link, ocena;
+    private String tytul, link, ocena, recenzent;
+
+    private boolean czy_ocenione;
+
 }
